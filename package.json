@@ -1,6 +1,9 @@
 {
-  "name": "sendcap",
+  "name": "@jimdc/sendcap",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "A pure, zero-dependency spend guard: 'given how much I've already spent in each window, may I make one more paid action?' Denial-of-wallet ceilings for email sends, LLM calls, SMS, or any paid API — bring your own counters. Runs anywhere (Cloudflare Workers, Deno, Bun, Node, browser).",
   "type": "module",
   "main": "index.mjs",

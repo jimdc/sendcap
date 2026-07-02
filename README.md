@@ -3,13 +3,15 @@
 **A denial-of-wallet spend guard in one pure function.** Given how much you've already spent in each window, it decides whether you may make **one more paid action** — and if not, which ceiling stopped you. Zero dependencies, no I/O, no runtime assumptions. Works for email sends, LLM calls, SMS, paid API hits — anything that costs money per action.
 
 ```
-npm install sendcap
+npm install @jimdc/sendcap
 ```
+
+> Published scoped as `@jimdc/sendcap` — npm's name-similarity filter reserves the bare `sendcap`. The repo, and the name everywhere else, is just **sendcap**.
 
 The whole library:
 
 ```js
-import { capDecision } from "sendcap";
+import { capDecision } from "@jimdc/sendcap";
 
 const { allow, capped } = capDecision({
   want:   hasWork && !dryRun,        // do you even want to act right now?
